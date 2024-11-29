@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 5;
+  font-family: "Rubik", sans-serif;
+}
+
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+body {
+  margin: 0;
+  overflow: scroll; /* Tetap memungkinkan scroll */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+button {
+  position: relative;
+  height: 70px;
+}
+
+section {
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+.title {
+  color: orange;
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+
+/* ============ section 1 */
+.section1 {
+  height: 150vh;
+  background-image: url(cyber.jpg);
+}
+
+/* ============ curtain */
+.curtain h1.mobile {
+  display: none;
+}
+.curtain h1,
+h2 {
+  text-transform: uppercase;
+}
+
+.curtain h2 {
+  font-weight: 200;
+  font-size: 2em;
+}
+
+.curtain h1 {
+  line-height: 1;
+  font-size: 10em;
+  font-weight: 800;
+  background-image: url(cyber.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-clip: text;
+  color: transparent;
+}
+
+.curtain {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgb(217, 217, 217);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.wrapper {
+  position: relative;
+  border-radius: 20px;
+  margin-top: 95%;
+  padding: 5%;
+  gap: 30px 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:left;
+  background-color: #ffffff70;
+}
+
+/* ============ section 2 */
+.section2 {
+  padding: 10%;
+  padding-bottom: 30%;
+  background-image: url(tree.jpg);
+}
+
+.card {
+  margin-right: 20px;
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid orange;
+}
+
+.card img {
+  width: 100%;
+}
+
+h3 {color: azure;}
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+/* ============ section 3 */
+.section3 {
+  padding: 10%;
+  background-image: url(space.jpg);
+}
+.footer {
+  position: relative;
+  margin-top: 300px;
+  padding: 3rem 0;
+  color: #ff9797;
+  background: rgba(126, 126, 126, 0.978);
+  margin-top: auto;
+}
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__col-title {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.footer__col-title * ~ span {
+  margin-left: 1rem;
+}
+.footer a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+.footer a * ~ span {
+  margin-left: 1rem;
+}
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer__copyrights {
+  padding-left: 3rem;
+  padding-top: 3rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer__copyrights p {
+  display: flex;
+}
+.footer__copyrights p a {
+  margin-left: 0.5rem;
+}
+/* ============ Responsive */
+
+@media screen and (max-width: 1024px) {
+  .curtain h1 {
+    font-size: 8em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section1 {
+    height: 200vh;
+  }
+  .curtain h1.desktop {
+    display: none;
+  }
+  .curtain h1.mobile {
+    display: block;
+  }
+
+  .mapouter, .contact {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section1 {
+    height: 150vh;
+  }
+  .section2 {
+    padding: 20% 3% 50%;
+  }
+  
+  .curtain h1 {
+    font-size: 5em;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+  .section3 {
+    padding: 20% 3%;
+  }
+}
