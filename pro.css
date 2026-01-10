@@ -2,32 +2,25 @@
 
 * {
   margin: 0;
-  padding: 5;
+  padding: 0;
   font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
 }
 
 html {
   scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  overflow: scroll; /* Tetap memungkinkan scroll */
+  overflow: scroll;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
+  background-color: #1a1a1a; /* FIX: Mencegah flash putih di akhir */
 }
 
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
-}
-
-button {
-  position: relative;
-  height: 70px;
-}
-
-section {
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 a {
@@ -35,50 +28,35 @@ a {
   text-decoration: none;
 }
 
-.title {
-  color: orange;
-  font-size: 32px;
-  padding-bottom: 20px;
-}
-
-/* ============ section 1 */
-.section1 {
-  height: 150vh;
-  background-image: url(cyber.jpg);
+section {
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2; /* Konten harus di atas curtain */
 }
 
 /* ============ curtain */
-.curtain h1.mobile {
-  display: none;
-}
-.curtain h1,
-h2 {
-  text-transform: uppercase;
-}
-
-.curtain h2 {
-  font-weight: 200;
-  font-size: 2em;
-}
-
+.curtain h1.mobile { display: none; }
+.curtain h1, .curtain h2 { text-transform: uppercase; }
+.curtain h2 { font-weight: 200; font-size: 2em; }
 .curtain h1 {
   line-height: 1;
-  font-size: 10em;
+  font-size: 8em;
   font-weight: 800;
-  background-image: url(cyber.jpg);
+  background-image: url(cyber.jpg); /* Pastikan gambar ini ada */
   background-size: cover;
   background-attachment: fixed;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
-
 .curtain {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 1; /* Curtain ada di paling belakang */
   background-color: rgb(217, 217, 217);
   display: flex;
   flex-direction: column;
@@ -86,6 +64,11 @@ h2 {
   padding: 0 10%;
 }
 
+/* ============ section 1 (About) */
+.section1 {
+  height: 150vh;
+  background-image: url(cyber.jpg); /* Pastikan gambar ini ada */
+}
 .wrapper {
   position: relative;
   border-radius: 20px;
@@ -97,128 +80,261 @@ h2 {
   justify-content:left;
   background-color: #ffffff70;
 }
+.wrapper h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+.wrapper p {
+    font-size: 1.1rem;
+    color: #222;
+}
 
-/* ============ section 2 */
+
+/* ============ section 2 (Projects) */
 .section2 {
   padding: 10%;
-  padding-bottom: 30%;
-  background-image: url(tree.jpg);
+  background-image: url(tree.jpg); /* Pastikan gambar ini ada */
 }
-
-.card {
-  margin-right: 20px;
-  width: 50%;
-  border-radius: 5px;
-  border: 1px solid orange;
+.section2 h2, .section-certs h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
 }
-
-.card img {
-  width: 100%;
-}
-
-h3 {color: azure;}
-
 .box {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
-
-/* ============ section 3 */
-.section3 {
-  padding: 10%;
-  background-image: url(space.jpg);
-}
-.footer {
-  position: relative;
-  margin-top: 300px;
-  padding: 3rem 0;
-  color: #ff9797;
-  background: rgba(126, 126, 126, 0.978);
-  margin-top: auto;
-}
-.footer__columns {
-  display: flex;
-  justify-content: space-around;
-}
-.footer__col-title {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-}
-.footer__col-title * ~ span {
-  margin-left: 1rem;
-}
-.footer a {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  text-decoration: none;
-}
-.footer a * ~ span {
-  margin-left: 1rem;
-}
-.footer__nav-list {
+.card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 1px solid orange;
+  background-color: #2a2a2a;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
-.footer__copyrights {
-  padding-left: 3rem;
-  padding-top: 3rem;
-  margin-top: 3rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+.card:hover {
+    transform: translateY(-5px);
 }
-.footer__copyrights p {
-  display: flex;
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
-.footer__copyrights p a {
-  margin-left: 0.5rem;
-}
-/* ============ Responsive */
-
-@media screen and (max-width: 1024px) {
-  .curtain h1 {
-    font-size: 8em;
-  }
-}
-@media screen and (max-width: 768px) {
-  .section1 {
-    height: 200vh;
-  }
-  .curtain h1.desktop {
-    display: none;
-  }
-  .curtain h1.mobile {
-    display: block;
-  }
-
-  .mapouter, .contact {
+.img-placeholder {
     width: 100%;
-  }
+    height: 200px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+}
+.img-placeholder::after {
+    content: '\f03e';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 50px;
+}
+.card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-content h3 {
+  color: orange;
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.card-content p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+.card-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: orange;
+  color: #1a1a1a;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.card-button:hover {
+  background-color: #ffc107;
+}
+.card-button.disabled {
+    background-color: #555;
+    color: #aaa;
+    cursor: not-allowed;
+}
+.card-button.disabled:hover {
+    background-color: #555;
+}
+
+/* ============ section 3 (Certificates) */
+.section-certs {
+  padding: 10%;
+  background-image: url(space.jpg); /* Menggunakan BG yang sama */
+}
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+.cert-card {
+  display: flex;
+  align-items: center;
+  background: rgba(42, 42, 42, 0.9);
+  border: 1px solid orange;
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.2);
+}
+.cert-icon {
+  font-size: 2.5rem;
+  color: orange;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+.cert-info h4 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+.cert-info p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.cert-info a {
+  color: orange;
+  text-decoration: none;
+  font-weight: 600;
+}
+.cert-info a:hover { text-decoration: underline; }
+.cert-card.coming-soon { opacity: 0.6; }
+.cert-card.coming-soon .cert-info h4 { color: #aaa; }
+.cert-card.coming-soon .cert-info p { color: #888; }
+
+/* ============ section 4 (Footer) */
+.footer-baru {
+    position: relative;
+    z-index: 2;
+    padding: 80px 10%;
+    background-color: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+}
+.footer-container { max-width: 900px; margin: 0 auto; }
+.footer-cta h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.footer-cta p {
+    font-size: 1.1rem;
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+.footer-links-utama {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+.footer-link-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.footer-link-box i { font-size: 2.5rem; margin-bottom: 10px; }
+.footer-link-box:hover {
+    transform: translateY(-5px);
+    background-color: orange;
+    color: #1a1a1a;
+}
+.footer-copyright {
+    border-top: 1px solid #444;
+    padding-top: 30px;
+    font-size: 0.9rem;
+    color: #888;
+}
+.footer-copyright p { margin-bottom: 10px; }
+.footer-copyright a {
+    color: #ccc;
+    display: inline-flex;
+    align-items: center;
+}
+.footer-copyright a:hover { color: orange; }
+.footer-copyright a span { margin-left: 8px; }
+
+
+/* ==================================================
+   ANIMASI: FADE-IN SAAT SCROLL
+================================================== 
+*/
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+}
+.fade-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== 
+*/
+@media screen and (max-width: 1024px) {
+  .curtain h1 { font-size: 8em; }
+}
+
+@media screen and (max-width: 768px) {
+  .section1 { height: 200vh; }
+  .curtain h1.desktop { display: none; }
+  .curtain h1.mobile { display: block; }
 }
 
 @media screen and (max-width: 480px) {
-  .section1 {
-    height: 150vh;
-  }
-  .section2 {
-    padding: 20% 3% 50%;
-  }
-  
-  .curtain h1 {
-    font-size: 5em;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  .title {
-    font-size: 20px;
-  }
-  .section3 {
-    padding: 20% 3%;
-  }
+  .section1 { height: 150vh; }
+  .section2, .section-certs { padding: 20% 5% 50%; }
+  .curtain h1 { font-size: 5em; }
+  .wrapper { margin-top: 110%; }
+  .footer-baru { padding: 60px 5%; }
+  .footer-cta h2 { font-size: 2rem; }
+  .footer-link-box { width: 100px; height: 90px; }
+  .footer-link-box i { font-size: 2rem; }
 }

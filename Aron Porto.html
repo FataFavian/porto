@@ -3,114 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mini portofolio</title>
+    <title>Fata Favian - Front-End Developer Portfolio</title>
+    
     <link rel="stylesheet" href="pro.css" />
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .navbar img {
-            width: 40px; 
-            height: auto; 
-        }
-
-    </style>
 </head>
 <body>
-    <section class="section1">
-      <div class="wrapper">
-        <h2>About me</h2>
+
+    <section id="about" class="section1">
+      <div class="wrapper fade-on-scroll">
+        <h2>About Me</h2>
         <br />
         <p>
           My full name is Fata Favian Cannavaro, I was born in Surabaya.
           I am currently pursuing a bachelor's degree in Information Technology Education
           at State University of Surabaya. 
-           I am interested in web dev and now starting to learn frontend developer.
-
+          I am interested in web dev and now starting to learn frontend developer.
         </p>
         <br />
       </div>
     </section>
 
     <div class="curtain">
-      <h2>Hello <br />i'am Aron</h2>
-      <h1 class="desktop">front end<br />and web<br />development</h1>
+      <h2>Hello <br /> I'm Aron</h2>
+      <h1 class="desktop">prompt<br />engineering</h1>
       <h1 class="mobile">it<br />edu <br />cation</h1>
     </div>
 
-    <section class="section2">
-        <div class="content">
-                      <div class="button">
-                          <form class="d-flex me-auto">
-                              <a href="PROFILE.html" class="btn btn-outline-success me-2" type="button">Project1</a>
-                          </form>
-                      </div>
-                    <div class="box">
-                      <div class="card">
-                        <img src="Screenshot Web.png" alt="Screenshot Web">
-                        <h3>simple web assignment</h3>
-                      </div>
-                      <div class="card">
-                        <img src="" alt="project 2">
-                        <h3>coming soon</h3>
-                      </div>
+    <section id="projects" class="section2">
+        <div class="content fade-on-scroll">
+            <h2>My Projects</h2>
+            <div class="box">
+                <div class="card">
+                    <img src="Screenshot Web.png" alt="Screenshot of simple web assignment">
+                    <div class="card-content">
+                        <h3>Simple Web Assignment</h3>
+                        <p>Sebuah website statis sederhana yang dibuat untuk tugas kuliah, mendemonstrasikan fundamental HTML & CSS.</p>
+                        <a href="PROFILE.html" class="card-button">Lihat Proyek</a>
                     </div>
-        </div>
-    </section>
-    <section class="section3">
-    <footer class="footer">
-        <div class="container">
-          <div class="footer__columns">
-            <div class="footer__col">
-              <h3 class="footer__col-title">
-                <i data-feather="shopping-bag"></i> <span>Biodata</span></h3>
-              <nav class="footer__nav">
-                <ul class="footer__nav-list">
-                  <li class="footer__nav-item">
-                    <a href="" class="footer__nav-link">
-                       Fata Favian Cannavaro
-                    </a>
-                  </li>
-                  <li class="footer__nav-item">
-                    <a href="" class="footer__nav-link">
-                       Information Technology Education
-                    </a>
-                  </li>
-                  <li class="footer__nav-item">
-                    <a href="" class="footer__nav-link">
-                       State University of Surabaya
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div class="footer__col">
-              <h3 class="footer__col-title">
-                <i data-feather="share-2"></i> <span>Social</span></h3>
-              <nav class="footer__nav">
-                <ul class="footer__nav-list">
-                  <li><i class="fab fa-linkedin"></i>LinkedIn:<a href="https://www.linkedin.com/in/fatafavian7" target="_blank">@Fata Favian</a></li>
-                  <li><i class="fab fa-github"></i>Github: <a href="https://github.com/FataFavian" target="_blank"> @Fata Favian </a></li>
-                  <li><i class="fab fa-instagram"></i>Instagram: <a href="https://www.instagram.com/ronan_ronz/" target="_blank"> @ronan_ronz</a></li>
-                </ul>
-              </nav>
-            </div>
-            <div class="footer__col">
-              <h3 class="footer__col-title">
-                <i data-feather="send"></i> <span>Contact</span></h3>
-              <nav class="footer__nav">
-                <ul class="footer__nav-list">
-                  <li><i class="fab fa-whatsapp"></i>WhatsApp: <a href="https://wa.me/62881026789506" target="_blank"> Chat di WhatsApp</a></li>
-                  <li><i class="fas fa-envelope"></i>Email: <a href="fatafavian@gmail.com" target="_blank"> @Fata Favian</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-            <div class="footer__copyrights">
-              <p>SUPPORT <a href="https://www.instagram.com/dibimbing.id" class="footer__nav-link">
-                <i data-feather="instagram"></i><span>@dibimbing.id</span></a></p>
+                </div>
+                <div class="card">
+                    <img src="MBA.png" alt="Screenshot of Makan Bergizi Atlet">
+                    <div class="card-content">
+                        <h3>Makan Bergizi Atlet</h3>
+                        <p>Sebuah website untuk memberikan rekomendasi makanan bergizi kepada atlet dari berbagai cabang olahraga. Terdapat AI chatbot juga</p>
+                        <a href="https://kinggris.web.id/" class="card-button">Lihat Proyek</a>
+                    </div>
+                </div>
             </div>
         </div>
-      </footer>
     </section>
+
+    <section id="certificates" class="section-certs">
+        <div class="content fade-on-scroll">
+            <h2>Licenses & Certificates</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="cert-info">
+                        <h4>Web Developer Series 8.0</h4>
+                        <p>dibimbing.id</p>
+                        <a href="https://dibimbing-lms-dev.s3.ap-southeast-1.amazonaws.com/production/digital-skill-fair/da11b527-087d-4dfa-b313-76ca52861817.pdf" target="_blank">Lihat Kredensial</a>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="cert-info">
+                        <h4>Digital Skill Fair 33.0</h4>
+                        <p>dibimbing.id</p>
+                        <a href="https://dibimbing-lms-dev.s3.ap-southeast-1.amazonaws.com/production/digital-skill-fair/4a5354ad-db8e-4cd9-b360-794a1275b2ff.pdf" target="_blank">Lihat Kredensial</a>
+                    </div>
+                </div>
+                <div class="cert-card coming-soon">
+                    <div class="cert-icon"><i class="fas fa-plus"></i></div>
+                    <div class="cert-info">
+                        <h4>Sertifikat Baru</h4>
+                        <p>Segera ditambahkan...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer-baru">
+        <div class="footer-container fade-on-scroll">
+            <div class="footer-cta">
+                <h2>Let's Connect!</h2>
+                <p>
+                    Saya terbuka untuk diskusi mengenai peluang kerja,
+                    proyek freelance, atau sekadar bertukar pikiran.
+                </p>
+            </div>
+            <div class="footer-links-utama">
+                <a href="https://www.linkedin.com/in/fatafavian7" target="_blank" class="footer-link-box">
+                    <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/FataFavian" target="_blank" class="footer-link-box">
+                    <i class="fab fa-github"></i><span>GitHub</span>
+                </a>
+                <a href="mailto:fatafavian@gmail.com" target="_blank" class="footer-link-box">
+                    <i class="fas fa-envelope"></i><span>Email</span>
+                </a>
+                <a href="https://wa.me/62881026789506" target="_blank" class="footer-link-box">
+                    <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Fata Favian Cannavaro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
     <script src="ject.js"></script>
 </body>
 </html>
