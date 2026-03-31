@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fata Favian - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="favian.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="space-theme">    
+
+    <canvas id="hyperspace-canvas"></canvas>
+
+    <div class="aurora-container">
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+        <div class="aurora-blob blob-3"></div>
+    </div>
+
+    <div class="night-sky">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <nav id="main-nav" class="navbar">
+        <div class="nav-logo">Fata Favian Cannavaro<span>.</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <div class="nav-indicator"></div> 
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="content-wrapper">
+    <section id="about" class="section1">
+      <div class="wrapper fade-on-scroll">
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text">
+                  <h3 class="neon-title text-white">About Me!</h3>
+                  <p>
+                    Saya adalah mahasiswa Pendidikan Teknologi Informasi di Universitas Negeri Surabaya yang secara proaktif melakukan transisi dari latar belakang teknik pemesinan ke pengembangan perangkat lunak. Kini berfokus pada Web Development dan AI, dengan keterampilan dasar yang telah dikembangkan dalam [HTML, CSS, JavaScript] serta pemahaman konsep pemrograman grafis komputer menggunakan bahasa C++ melalui implementasi library GLUT. Memiliki minat kuat untuk memperdalam konsep dasar Machine Learning.
+                  </p>
+                </div>
+                
+               <div class="activity-single fade-on-scroll">
+                    <h2 class="activities-title text-white">Activities</h2>
+                    <p class="activities-description text-gray">
+                        Saat ini menjabat sebagai Kepala Divisi Atlet & Kepelatihan UKM Penggemar Catur Unesa 2026. Menyeleksi para anggota UKM Penggemar Catur untuk didelegasikan pada lomba antar universitas mewakili Unesa. Menjadi Ketua Pelaksana Unesa Chess Competition lomba catur hybrid tingkat universitas. Pengalaman ini mengasah kemampuan kepemimpinan, koordinasi tim, dan manajemen acara tingkat universitas.
+                    </p>
+                </div>
+            </div>
+            
+           <div class="profile-section fade-on-scroll">
+                <div class="hello-fata">
+                    <h3 class="neon-title text-white">Hello I'm Fata Favian</h3>
+                </div>
+                <div class="profile-showcase">
+                    <div class="profile-photo-frame">
+                        <img src="./picture/aron.JPG" alt="Foto Fata Favian Cannavaro" class="profile-img">
+                    </div>
+                    <div class="orbit-wrapper">
+                        <svg class="connecting-lines" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="200" cy="200" r="140" class="ring ring-1" />
+                            <circle cx="200" cy="200" r="180" class="ring ring-2" />
+                            <circle cx="200" cy="200" r="220" class="ring ring-3" />
+                        </svg>
+                        <span class="floating-tag tag-html">HTML</span>
+                        <span class="floating-tag tag-css">CSS</span>
+                        <span class="floating-tag tag-js">JavaScript</span>
+                        <span class="floating-tag tag-ml">Machine Learning</span>
+                        <span class="floating-tag tag-cpp">C++</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <br />
+      </div>
+    </section>
+
+   <section id="projects" class="section2 space-theme"> 
+        <div class="content fade-on-scroll">
+            <h2 class="neon-title text-white">My Projects</h2>
+            <div class="project-grid"> 
+                
+                <div class="project-card">
+                    <div id="project1" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                        <div class="carousel-indicators custom-indicators">
+                            <button type="button" data-bs-target="#project1" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#project1" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#project1" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="picture/maze.png" class="d-block w-100 project-image" alt="Machine-Learning-Maze-Game">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="picture/maze2.png" class="d-block w-100 project-image" alt="Machine-Learning-Maze-Game">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="picture/maze3.png" class="d-block w-100 project-image" alt="Machine-Learning-Maze-Game">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-name text-white">Machine Learning Maze Game</h3>
+                        <p class="project-description text-gray">Game labirin interaktif menggabungkan block programming dan Artificial Intelligence. Sistem mendeteksi arah jari tangan secara real-time dengan AI untuk menggerakkan karakter, mengumpulkan poin dan menyelesaikan labirin.</p>
+                        <a href="https://github.com/FataFavian/Machine-Learning-Maze-Game.git" class="project-button">Lihat Proyek</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div id="project2" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                        <div class="carousel-indicators custom-indicators">
+                            <button type="button" data-bs-target="#project2" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#project2" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#project2" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="picture/mba.png" class="d-block w-100 project-image" alt="MBA">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="picture/mba2.png" class="d-block w-100 project-image" alt="MBA">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="picture/mba3.png" class="d-block w-100 project-image" alt="MBA">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-name text-white">Makan Bergizi Atlet</h3>
+                        <p class="project-description text-gray">Sebuah website untuk memberikan rekomendasi makanan bergizi kepada atlet dari berbagai cabang olahraga. Terdapat AI chatbot juga</p>
+                        <a href="https://kinggris.web.id/" class="project-button">Lihat Proyek</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div id="project3" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                        <div class="carousel-indicators custom-indicators">
+                            <button type="button" data-bs-target="#project3" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#project3" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#project3" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="picture/ft.png" class="d-block w-100 project-image" alt="Fakultas Teknik 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="picture/ft2.png" class="d-block w-100 project-image" alt="Fakultas Teknik 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="picture/ft3.png" class="d-block w-100 project-image" alt="Fakultas Teknik 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-name text-white">3D Campus Virtual Tour</h3>
+                        <p class="project-description text-gray">
+                            Simulasi lingkungan 3D interaktif dari Fakultas Teknik Unesa. Proyek ini mendemonstrasikan pemetaan matriks koordinat (X, Y, Z) serta mengimplementasikan sistem pencahayaan menggunakan fitur GLLighting pada library GLUT (OpenGL) dengan bahasa pemrograman C++ murni.
+                        </p>
+                        <a href="https://github.com/FataFavian/ProyekFT" target="_blank" class="project-button">Lihat Proyek</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="section-certs">
+        <div class="content fade-on-scroll">
+            <h2 class="neon-title text-white">My Certifications</h2> 
+            
+            <div class="filter-container fade-on-scroll">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bootcamp">Bootcamp</button>
+                <button class="filter-btn" data-filter="hakcipta">Hak Cipta</button>
+                <button class="filter-btn" data-filter="lomba">Lomba</button>
+                <button class="filter-btn" data-filter="webinar">Seminar & Webinar</button>
+                <button class="filter-btn" data-filter="organisasi">Organisasi & Volunteer</button>
+            </div>
+
+           <div class="cert-grid-filtered">
+                <div class="cert-card" data-category="bootcamp">
+                    <a href="https://sertifikatgm.s3.ap-southeast-1.amazonaws.com/event-187/sertifikat-AC28-000952.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/diklatgame.png" alt="Diklat Game" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Diklat Merancang Proyek Game Interaktif</h4>
+                        <p>gurumengajar.id</p>
+                    </div>
+                </div>
+
+                <div class="cert-card" data-category="bootcamp">
+                    <a href="https://dibimbing-lms-dev.s3.ap-southeast-1.amazonaws.com/production/digital-skill-fair/da11b527-087d-4dfa-b313-76ca52861817.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/webdevseries8.png" alt="Web Developer Series 8.0" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Web Developer Series 8.0 - Frontend</h4>
+                        <p>dibimbing.id</p>
+                    </div>
+                </div>
+
+                <div class="cert-card" data-category="bootcamp">
+                    <a href="https://dibimbing-lms-dev.s3.ap-southeast-1.amazonaws.com/production/digital-skill-fair/4a5354ad-db8e-4cd9-b360-794a1275b2ff.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/dsf33.png" alt="Digital Skill Fair 33.0" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Digital Skill Fair 33.0 - Frontend Developer</h4>
+                        <p>dibimbing.id</p>
+                    </div>
+                </div>
+
+                <div class="cert-card" data-category="hakcipta">
+                    <a href="./sertifikat/sertifikat_EC002025191523 - Makan Bergizi Atlet.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/hakcipta.png" alt="Hak Cipta" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Surat Pencatatan Ciptaan Website Makan Bergizi Atlet</h4>
+                        <p>LPPM Unesa</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="lomba">
+                    <a href="./sertifikat/Sertifikat Peserta Kejurprov Junior Putra A_Fata Favian Cannavaro.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/kejurprov.png" alt="Kejurprov" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Kejurprov Jawa Timur ke-56</h4>
+                        <p>Percasi Jawa Timur</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="lomba">
+                    <a href="./sertifikat/Sertifikat Peserta ICT 2024 Fata Favian.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/ict.png" alt="ITS Chess Tournament" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">ITS Chess Tournament</h4>
+                        <p>UKM Catur ITS</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="lomba">
+                    <a href="./sertifikat/Fata Favian Cannavaro Aron_ffc DINUS INTERNATIONAL CHESS TOURNAMENT CERTIFI.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/dinus.png" alt="Dinus Chess International Online Tournament" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Dinus Chess International Online Tournament</h4>
+                        <p>Universitas Dian Nuswantoro</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="lomba">
+                    <a href="./sertifikat/Sertifikat Peserta ACL Fata Favian Cannavaro.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/acl.png" alt="Airlangga Chess League" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Airlangga Chess League</h4>
+                        <p>UKM Catur Unair</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="lomba">
+                    <a href="./sertifikat/Sertifikat Peserta ACT Kategori Umum Fata Favian Cannavaro.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/act.png" alt="Airlangga Chess Tournament" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Airlangga Chess Tournament</h4>
+                        <p>UKM Catur Unair</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="lomba">
+                    <a href="./sertifikat/Sertifikat Peserta UCT 2024 Fata Favian Cannavaro.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/uct.png" alt="Unesa Chess Tournament" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Unesa Chess Tournament</h4>
+                        <p>UKM Penggemar Catur Unesa</p>
+                    </div>
+                </div>
+
+                <div class="cert-card" data-category="webinar">
+                    <a href="https://mapi.sdmdigital.id/get-file?path=output_signed/229-1148-9754/b7bcfa83-6fe8-4561-8312-a5eba3add8c2.pdf&disk=dts-storage-sertifikat" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/menskalakanai.png" alt="Menskalakan AI" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Menskalakan AI di Organisasi</h4>
+                        <p>Komdigi</p>
+                    </div>
+                </div>
+
+                <div class="cert-card" data-category="webinar">
+                    <a href="https://mapi.sdmdigital.id/get-file?path=output_signed/229-1144-10029/abc5eba5-bf21-4622-95b0-ca9dea920a1c.pdf&disk=dts-storage-sertifikat" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/aiengineer.png" alt="AI Engineer" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">AI Engineer For Millenial</h4>
+                        <p>Komdigi</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="webinar">
+                    <a href="https://sertifikatgm.s3.ap-southeast-1.amazonaws.com/event-190/sertifikat-KR11-2600095.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/animasi.png" alt="" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Kursus Membuat Animasi Pembelajaran Menggunakan AI</h4>
+                        <p>gurumengajar.id</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="webinar">
+                    <a href="" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/expressjs.png" alt="ExpressJS" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Programming ExpressJS</h4>
+                        <p>IDKoding</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="webinar">
+                    <a href="sertifikat/Sertifikat Peserta Future Entrepreneur Summit 2025.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/fest.png" alt="Future Entrepreneur Summit" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Future Entrepreneur Summit</h4>
+                        <p>FESt Management</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="webinar">
+                    <a href="sertifikat/E-CERTIFICATE PARTICIPANT EVENT SERIES #3 Fata Favian Cannavaro.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/es3.png" alt="AI and Blockchain" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Participant Event Series #3 Exploring AI and Blockchain</h4>
+                        <p>Google Developer Group On Campus Unesa</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="webinar">
+                    <a href="sertifikat/Sertifikat SPM Fata Favian Cannavaro.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/spm.png" alt="Sekolah Pasar Modal" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Sekolah Pasar Modal</h4>
+                        <p>PT Bursa Efek Indonesia</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="webinar">
+                    <a href="sertifikat/ICOSBI 2025 - Certificate Fata Favian Cannavaro.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/icosbi.png" alt="International Conference of SDGs and Bibliometic Studies" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">International Conference of SDGs and Bibliometic Studies</h4>
+                        <p>Universitas Negeri Surabaya</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="webinar">
+                    <a href="sertifikat/Certificate Participants International Sharia Economic Seminar (SERIES II).pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/sharia.png" alt="International Sharia Economic Seminar" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">International Sharia Economic Seminar</h4>
+                        <p>Islamic Economics Study Group (KSEI)</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="organisasi">
+                    <a href="./sertifikat/Sertifikat Ketua Pelaksana UCC 2026.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/ucc.png" alt="Unesa Chess Competition" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Ketua Pelaksana Unesa Chess Competition</h4>
+                        <p>UKM Penggemar Catur Unesa</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="organisasi">
+                    <a href="./sertifikat/Sertifikat Panitia RKU 2026 Fata Favian Cannavaro.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/rku.png" alt="Rapat Kerja Upgrading" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Panitia Rapat Kerja Upgrading</h4>
+                        <p>UKM Penggemar Catur Unesa</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="organisasi">
+                    <a href="sertifikat/Certificate Volunteer of Event Series #4 Fata Favian Cannavaro.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/es4.png" alt="AI X Business" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Volunteer Event Series #4 AI X Business</h4>
+                        <p>Google Developer Group On Campus Unesa</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="organisasi">
+                    <a href="./sertifikat/Sertifikat Panitia UKM EXPO Fata Favian Cannavaro.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/ukmexpo.png" alt="UKM Expo" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Panitia UKM Expo Unesa</h4>
+                        <p>UKM Penggemar Catur Unesa</p>
+                    </div>
+                </div>
+
+                <div class="cert-card extra-cert d-none" data-category="organisasi">
+                    <a href="./sertifikat/Sertifikat Panitia UKM EXPO Fata Favian Cannavaro.pdf" target="_blank" class="cert-link"> 
+                        <div class="cert-image-container">
+                            <img src="picture/ma.png" alt="Musywarah Anggota" class="cert-image"> 
+                            <div class="overlay-pdf text-white"><i class="fas fa-eye"></i> View PDF</div>
+                        </div>
+                    </a>
+                    <div class="cert-details text-gray text-center">
+                        <h4 class="text-white">Panitia Musywarah Anggota</h4>
+                        <p>UKM Penggemar Catur Unesa</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="show-more-container fade-on-scroll">
+                <button id="showMoreBtn" class="show-more-btn">
+                    Show More <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="footer-dark space-theme">
+        <div class="footer-container fade-on-scroll">
+            <div class="footer-cta">
+                <h2 class="neon-title text-white">Let's Connect!</h2>
+            </div>
+            
+            <div class="social-boxes">
+                <a href="https://www.linkedin.com/in/fatafavian7" target="_blank" class="social-box">
+                    <i class="fab fa-linkedin text-spaceblue"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/FataFavian" target="_blank" class="social-box">
+                    <i class="fab fa-github text-spaceblue"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:fatafavian@gmail.com" target="_blank" class="social-box">
+                    <i class="fas fa-envelope text-spaceblue"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://wa.me/62881026789506" target="_blank" class="social-box">
+                    <i class="fab fa-whatsapp text-spaceblue"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://instagram.com/fatafavian_" target="_blank" class="social-box">
+                    <i class="fab fa-instagram text-spaceblue"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+
+            <div class="cv-download-wrapper">
+                <a href="CV_Fata_Favian.pdf" download="CV_Fata_Favian.pdf" class="btn-download-cv">
+                    <i class="fas fa-file-download"></i> Download CV
+                </a>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 Fata Favian Cannavaro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="cannavaro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+</body>
+</html>
